@@ -7,3 +7,8 @@ Plot above is time (us) vs number of threads (on a machine with 4 cores as you c
 The multi-threaded version is up to 3.6x faster than single-threaded on 4 cores,
 which is pretty good for a memory-bound algorithm.
 However, it's still a `O(n^3)` algorithm.
+
+![Vectorized performance](https://raw.githubusercontent.com/funchal/floyd-warshall-openmp/master/vectorised-performance.png)
+
+Additionally enabling auto-vectorization in gcc (`-march=native -ftree-vectorize`) results in
+a total of up to 14x speedup on an Intel i5-3570 (sse4.2).
