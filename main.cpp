@@ -35,7 +35,7 @@ public:
     ~stopwatch()
     {
         auto end = std::chrono::steady_clock::now();
-        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() << " ms";
+        std::cout << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() << " us";
     }
 };
 
@@ -81,6 +81,6 @@ int main(int, char*[])
 {
     test(100);
     test(200);
-    test(3000);
+    test(1000);
     return 0;
 }
