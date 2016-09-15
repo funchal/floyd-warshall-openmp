@@ -11,4 +11,4 @@ However, it's still a `O(n^3)` algorithm.
 ![Vectorized performance](https://raw.githubusercontent.com/funchal/floyd-warshall-openmp/master/vectorised-performance.png)
 
 Additionally enabling auto-vectorization in gcc (`-march=native -ftree-vectorize`) results in
-a total of up to 14x speedup on an Intel i5-3570 (sse4.2).
+a total of up to 14x speedup on a 4-core Intel i5-3570 (sse4.2).
