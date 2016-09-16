@@ -11,8 +11,8 @@
 template<typename T>
 void floydwarshall(T* mat, size_t n, int threads = 0)
 {
-   for (int k = 0; k < n; ++k) {
-#pragma omp parallel for schedule(static) num_threads(threads)
+    for (int k = 0; k < n; ++k) {
+#pragma omp parallel for num_threads(threads)
         for (int i = 0; i < n; ++i) {
             auto v = mat[i*n + k];
             for (int j = 0; j < n; ++j) {
